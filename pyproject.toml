@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "pr-refine"
+version = "0.1.0"
+description = ""
+authors = ["Arcadia <Arcadia822@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.10"
+streamlit = "^1.26.0"
+langchain = "^0.0.283"
+streamlit-chat = "^0.1.1"
+st-chat-message = "^0.3.8"
+openai = "^0.28.0"
+pymupdf = "^1.23.3"
+python-docx = "^0.8.11"
+bs4 = "^0.0.1"
+tqdm = "^4.66.1"
+mammoth = "^1.6.0"
+xlsxwriter = "^3.1.4"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
