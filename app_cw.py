@@ -38,6 +38,10 @@ with st.sidebar:
     check_btn = st.button(label="check")
 
 if check_btn and uploaded_files:
+    st.session_state.reports.clear()
+    st.session_state.data.clear()
+    st.session_state.status = ""
+
     case_count = len(uploaded_files)
     pb = st.progress(0, text=f"0/{case_count} 文档")
     cost, time_usage = 0, 0
