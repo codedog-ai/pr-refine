@@ -90,7 +90,7 @@ class Checker:
         f2, req_report = future[1]
 
         flag = f1 and f2
-        report = f"- {obj_report}\n- {req_report}"
+        report = f"1.{obj_report}\n2.{req_report}"
         return Report(
             table=[{"目录": chapter.pretty_name()} for chapter in self.doci.chapters],
             flag=flag,

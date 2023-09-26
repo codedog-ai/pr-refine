@@ -370,6 +370,20 @@ files = [
 ]
 
 [[package]]
+name = "dashscope"
+version = "1.11.0"
+description = "dashscope client sdk library"
+optional = false
+python-versions = ">=3.7.0"
+files = [
+    {file = "dashscope-1.11.0-py3-none-any.whl", hash = "sha256:d5e44f1bf7129e3a02893c16767559a58819831b36251d94ab3be27a068bf12b"},
+]
+
+[package.dependencies]
+aiohttp = "*"
+requests = "*"
+
+[[package]]
 name = "dataclasses-json"
 version = "0.5.14"
 description = "Easily serialize dataclasses to and from JSON."
@@ -2340,4 +2354,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.10"
-content-hash = "703c3810a0ee3306c455bdd8b846af6a5f884725438ef5ace6235c14ab2d5fd8"
+content-hash = "791e379be71994e100dff76b8bad918407f028e86f2dc4a13fa3fa4582b5a8ff"

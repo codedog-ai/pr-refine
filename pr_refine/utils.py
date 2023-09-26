@@ -1,13 +1,20 @@
+from dashscope import Generation
 from langchain.chat_models import AzureChatOpenAI, ChatOpenAI
-from langchain.chat_models.base import BaseChatModel
 from langchain.embeddings import OpenAIEmbeddings
+from langchain.llms import Tongyi
+from langchain.schema.language_model import BaseLanguageModel
 
 import pr_refine.config as cfg
 
 
-def load_gpt35_llm(temperature: float = 0.0) -> BaseChatModel:
+def load_gpt35_llm(temperature: float = 0.0) -> BaseLanguageModel:
     """Load GPT 3.5 Model"""
-    if cfg.azure_openai_enabled:
+    if cfg.qwen_enabled:
+        llm = Tongyi(
+            client=Generation(),
+            model_name="qwen-turbo",
+        )
+    elif cfg.azure_openai_enabled:
         llm = AzureChatOpenAI(
             openai_api_type="azure",
             openai_api_key=cfg.azure_openai_api_key,
@@ -62,3 +69,9 @@ def load_embeddings():
         )
 
     return embeddings
+
+
+def load_tongyi():
+    llm = Tongyi(client=Generation(), model_name="qwen-turbo")
+
+    return llm

@@ -15,3 +15,5 @@ azure_openai_gpt4_dep_id: str = env.get("AZURE_OPENAI_GPT4_DEP_ID", "gpt-4")
 azure_openai_embedding_dep_id: str = env.get(
     "AZURE_OPENAI_EMBEDDING_DEP_ID", "text-embedding-ada-002"
 )
+
+qwen_enabled: bool = env.get("QWEN_ENABLED") is not None
